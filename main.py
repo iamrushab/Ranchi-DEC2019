@@ -1,4 +1,5 @@
 import time
+import threading
 from pymodbus.client.sync import ModbusSerialClient as ModbusClient
 client1 = ModbusClient(method = 'rtu', port = '/dev/ttyUSB0', parity='E',stopbits=1,bytesize=8,baudrate = 9600,timeout=1)
 
@@ -36,10 +37,16 @@ def down(start,stop,ramp,unit21):
         time.sleep(1)
         client1.close()
 
-def main():
+def main1():
     while True:
-        up(0,4000,5,1)
         down(4000,0,5,2)
 
-if __name__ == '__main__':
-    main()
+def main2():
+    while True:
+        down(4000,0,5,2)
+
+thread1 = threading.Thread(target=main1)
+thread1.start()
+
+thread2 = threading.Thread(target=main2)
+thread2.start()
