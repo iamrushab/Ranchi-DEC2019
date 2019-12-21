@@ -20,7 +20,7 @@ def up(start,stop,ramp):
         client1.close()
 
 def down(start,stop,ramp):
-    total = stop-start
+    total = start-stop
     print total
     a = total/ramp #Hz/Second
     print a
