@@ -16,6 +16,7 @@ def up(start,stop,ramp):
         start += a
         c += a
         print c
+        time.sleep(1)
         client1.close()
 
 def down(start,stop,ramp):
@@ -32,6 +33,7 @@ def down(start,stop,ramp):
         start -= a
         c += a
         print c
+        time.sleep(1)
         client1.close()
 
 def main():
