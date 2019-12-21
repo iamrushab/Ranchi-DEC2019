@@ -38,8 +38,8 @@ def down(start,stop,ramp,unit21):
 
 def main():
     while True:
-        up(0,6000,5,1)
-        down(6000,0,5,2)
+        up(0,4000,5,1)
+        down(4000,0,5,2)
 
 if __name__ == '__main__':
     main()
