@@ -38,7 +38,7 @@ def down(start,stop,ramp):
 
 def main():
     while True:
-        up(0,3000,5)
+        #up(0,3000,5)
         down(3000,0,5)
 
 if __name__ == '__main__':
