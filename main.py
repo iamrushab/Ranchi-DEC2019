@@ -39,7 +39,7 @@ def down(start,stop,ramp,unit21):
 
 def main1():
     while True:
-        down(4000,0,5,2)
+        up(0,4000,5,1)
 
 def main2():
     while True:
