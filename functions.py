@@ -1,0 +1,15 @@
+import time
+import RPi.GPIO as GPIO
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(32, GPIO.OUT)
+GPIO.setup(12, GPIO.OUT)
+p = GPIO.PWM(32, 200)
+q = GPIO.PWM(12, 200)
+p.start(0)
+q.start(0)
+p.ChangeDutyCycle(100)
+q.ChangeDutyCycle(100)
+time.sleep(10)
+p.stop()
+q.stop()
+GPIO.cleanup()
